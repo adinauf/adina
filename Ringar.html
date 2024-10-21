@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="Smycken.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>ADINA - Home</title>
+</head>
+<body>
+
+<!-- Top container with site logo and description -->
+<header class="top-container">
+    <a href="index.html">
+        <img class="top-container" style="width: 20%;" src="Download_Pink_sakura_flower_isolated_on_transparent_background__for_free-removebg-preview.png" alt="ADINA">
+    </a>
+</header>
+
+<!-- Sticky header with navigation toggle -->
+<!-- Sticky header with navigation toggle -->
+<div class="header-container">
+    <div class="header">ADINA</div>
+      <div class="header1">
+        <a href="testlogin.html">
+          <img class="icon-login" src="1.png" alt="login">
+        </a>
+        <a href="favorits.html">
+          <img class="icon-favorit" src="4-removebg-preview.png" alt="favorit">
+        </a>
+        <a href="testlogin.html">
+          <img class="icon-buy" src="2-removebg-preview.png" alt="buy">
+        </a>
+        <a href="testlogin.html">
+          <img class="icon-search" src="7-removebg-preview.png" alt="search">
+        </a>
+        <div class="container" onclick="toggleNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>        
+        <!-- Side navigation menu -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+            <div class="sidenav-info">Smycken:</div>
+            <a href="Ringar.html" class="link-list">&#10095; Ringar</a>
+            <a href="armband.html" class="link-list">&#10095; Armband</a>
+            <a href="orhangen.html" class="link-list">&#10095; Örhängen</a>
+            <a href="halsband.html" class="link-list">&#10095; Halsband</a>
+            <a class="link" href="#">Om oss</a>
+            <a class="link" href="#">Material</a>
+            <a class="link" href="#">Skicka in material</a>
+            <a class="link" href="#">Evenemang/Mässa</a>
+            <a class="link" href="#">Kontakt info</a>
+            <a class="link" href="#">Sociala medier</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Main content area -->
+<main class="content">
+    <div id="main">
+        <!-- Primary navigation -->
+        <nav class="navigation">
+            <a href="Ringar.html">RINGAR</a>
+            <a href="halsband.html">HALSBAND</a>
+            <a href="orhangen.html">ÖRHÄNGEN</a>
+            <a href="armband.html">ARMBAND</a>
+        </nav>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container1">
+            <div class="slides-container1" id="slider">
+                <div class="slides">
+                    <img src="armband.jpg" alt="Jewelry Image 1">
+                </div>
+                <div class="slides">
+                    <img src="halsband.jpg" alt="Jewelry Image 2">
+                </div>
+                <div class="slides">
+                    <img src="orhangen.jpg" alt="Jewelry Image 3">
+                </div>
+                <div class="slides">
+                    <img src="Ringar.jpg" alt="Jewelry Image 4">
+                </div>
+            </div>
+            <div class="controls">
+                <div class="dots-container">
+                    <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="next" onclick="plusSlides(1)">&#10095;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Grid -->
+        <div class="grid-containerimg">
+            <!-- Example Product 1 -->
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="product.html">
+                    <img class="mainImage" src="C.jpg" style="width:100%">
+                </a>
+                <ul>
+                    <li class="grid-containerimgsmall">ADINA</li>
+                    <li>
+                        <div class="text-icon-wrapper">
+                            <span class="grid-containerimglarge">Namn på armband</span>
+                            <span class="far fa-heart" style="color: white;" onclick="toggleLike(event)"></span>
+                            <span class="fas fa-heart" style="color: red; display: none;" onclick="toggleLike(event)"></span>
+                        </div>
+                    </li>
+                    <li class="grid-containerimglarge metalType">Silver</li>
+                    <li class="grid-containerimgsmall">Prisen</li>
+                    <li class="colordots-container">
+                        <span class="colordots" onclick="changeImage(this, 'C.jpg', 'Silver')"></span>
+                        <span class="colordots" onclick="changeImage(this, 'y.jpg', 'Gold')"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="row1">
+        <div class="column1">
+            <h2>Kontakt info:</h2>
+            <p>Mejla: <a href="mailto:adina.uf@outlook.com">adina.uf@outlook.com</a></p>
+        </div>
+        <div class="column1">
+            <h2>Hjälp:</h2>
+            <p><a href="#">FAQ</a></p>
+        </div>
+        <div class="column1">
+            <h2>Info om smycken:</h2>
+            <ul>
+                <li><a href="Ringar.html" title="Läs mer om ringar">Ringar</a></li>
+                <li><a href="halsband.html" title="Läs mer om halsband">Halsband</a></li>
+                <li><a href="armband.html" title="Läs mer om armband">Armband</a></li>
+                <li><a href="orhangen.html" title="Läs mer om örhängen">Örhängen</a></li>
+            </ul>
+        </div>
+        <div class="column1">
+            <h2>Matrial/skicka in:</h2>
+            <ul>
+                <li><a href="/ommatrial" title="om matrial">Om vårt matrial</a></li>
+                <li><a href="/hurOchVart" title="Hur och vart skickar man matrial">Hur och vart skickar man matrial</a></li>
+            </ul>
+        </div>
+    </div>
+    <p style="font-size: 10px;">&copy; 2024 ADINA Jewelry. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function changeImage(dotElement, imageName, metalType) {
+    // Change the main image
+    const mainImage = dotElement.closest('.product').querySelector('.mainImage');
+    mainImage.src = imageName;
+
+    // Change the metal type displayed
+    const metalTypeElement = dotElement.closest('.product').querySelector('.metalType');
+    metalTypeElement.innerText = metalType; // Update the displayed metal type
+}
+</script>
+</body>
+</html>

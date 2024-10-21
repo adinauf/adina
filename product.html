@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="Smycken.css">
+    <title>ADINA - Home</title>
+</head>
+<body>
+
+<!-- Top container with site logo and description -->
+<header class="top-container">
+  <a href="index.html">
+    <img class="top-container" style="width: 20%;" src="Download_Pink_sakura_flower_isolated_on_transparent_background__for_free-removebg-preview.png" alt="ADINA">
+  </a>
+</header>
+
+<!-- Sticky header with navigation toggle -->
+<div class="header-container">
+  <div class="header">ADINA</div>
+  <div class="header1">
+    <div class="container" onclick="toggleNav(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    
+    <!-- Side navigation menu -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+      <div class="sidenav-info">Smycken:</div>
+      <a href="Ringar.html" class="link-list">&#10095; Ringar</a>
+      <a href="armband.html" class="link-list">&#10095; Armband</a>
+      <a href="orhangen.html" class="link-list">&#10095; Örhängen</a>
+      <a href="halsband.html" class="link-list">&#10095; Halsband</a>
+      <a class="link" href="#">Om oss</a>
+      <a class="link" href="#">Material</a>
+      <a class="link" href="#">Skicka in material</a>
+      <a class="link" href="#">Evenemang/Mässa</a>
+      <a class="link" href="#">Kontakt info</a>
+      <a class="link" href="#">Sociala medier</a>
+    </div>
+  </div>
+</div>
+
+<main class="content">
+  <div id="main">
+    <h1 class="productheader" style="text-align: center;">Product</h1>
+    
+    <!-- Container for product details and images in a two-column grid -->
+    <div class="grid-containerproduct">
+      <!-- Product image on the left -->
+      <div class="grid-itemproductbig">
+        <img class="bigimg" src="A.jpg" alt="Main Product Image">
+      </div>
+
+      <!-- Product Details (text) on the right -->
+      <div class="product-details">
+        <h2 class="productheader">Namn på Product</h2>
+        <p class="price">399.00 SEK</p>
+        <p class="metal-type">18K Guldpläterad Mässing</p>
+        <ul class="ul-product">
+          <li class="li-productsmall">Metall Typ</li>
+          <li class="li-productsmall">Beskrivning eller info om produkten</li>
+        </ul>
+        <div class="color-options">
+          <input type="radio" name="color" id="color1" checked>
+          <label for="color1" class="colordots1 dot1"></label>
+  
+          <input type="radio" name="color" id="color2">
+          <label for="color2" class="colordots1 dot2"></label>
+  
+          <input type="radio" name="color" id="color3">
+          <label for="color3" class="colordots1 dot3"></label>
+  
+          <input type="radio" name="color" id="color4">
+          <label for="color4" class="colordots1 dot4"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Product Images below the main product -->
+    <div class="grid-containerproduct-images">
+      <div class="grid-itemproduct"><img src="C.jpg" alt="Additional Product Image"></div>
+      <div class="grid-itemproduct"><img src="y.jpg" alt="Additional Product Image"></div>
+    </div>
+
+    <h2 class="product-info"></h2>
+  </div>
+
+  <!-- Photo Grid -->
+  <div class="grid-containerimg">
+      <a href="product.html">
+        <img src="C.jpg" style="width:100%">
+        <ul>
+            <li class="grid-containerimgsmall">ADINA</li>
+            <li class="grid-containerimglarge">Namn på Örhängen</li>
+            <li class="grid-containerimglarge">Prisen</li>
+            <li class="grid-containerimgsmall">Typ av metall</li>
+            <span class="colordots"></span>
+            <span class="colordots"></span>
+        </ul>
+      </a>
+      <a href="product.html">
+          <img src="A.jpg" style="width:100%">
+          <ul>
+              <li class="grid-containerimgsmall">ADINA</li>
+              <li class="grid-containerimglarge">Namn på Örhängen</li>
+              <li class="grid-containerimglarge">Prisen</li>
+              <li class="grid-containerimgsmall">Typ av metall</li>
+              <span class="colordots"></span>
+              <span class="colordots"></span>
+          </ul>
+      </a>
+        <a href="product.html">
+            <img src="y.jpg" style="width:100%">
+            <ul>
+                <li class="grid-containerimgsmall"> ADINA</li>
+                <li class="grid-containerimglarge">Namn på Örhängen</li>
+                <li class="grid-containerimglarge">Prisen</li>
+                <li class="grid-containerimgsmall">Typ av metall</li>
+                <span class="colordots"></span>
+                <span class="colordots"></span>
+            </ul>
+        </a>
+        <a href="product.html">
+          <img src="C.jpg" style="width:100%">
+          <ul>
+              <li class="grid-containerimgsmall">ADINA</li>
+              <li class="grid-containerimglarge">Namn på Örhängen</li>
+              <li class="grid-containerimglarge">Prisen</li>
+              <li class="grid-containerimgsmall">Typ av metall</li>
+              <span class="colordots"></span>
+              <span class="colordots"></span>
+          </ul>
+        </a>
+  </div>
+  <div class="gallery-scroll">
+    <div class="row">
+        <div class="column">
+            <a href="product.html">
+                <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+            </a>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+            <a href="product.html">
+                <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+            </a>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+        <div class="column">
+          <a href="product.html">
+              <img src="Nope.jpg" alt="HTML tutorial" style="width: auto;height:290px;">
+          </a>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no...</p>
+        </div>
+    </div>
+  </div>
+    <!-- Photo Grid -->
+    <div class="grid-containerimg">
+      <a href="product.html">
+        <img src="C.jpg" style="width:100%">
+        <ul>
+            <li class="grid-containerimgsmall">ADINA</li>
+            <li class="grid-containerimglarge">Namn på Örhängen</li>
+            <li class="grid-containerimglarge">Prisen</li>
+            <li class="grid-containerimgsmall">Typ av metall</li>
+            <span class="colordots"></span>
+            <span class="colordots"></span>
+        </ul>
+      </a>
+      <a href="product.html">
+          <img src="A.jpg" style="width:100%">
+          <ul>
+              <li class="grid-containerimgsmall">ADINA</li>
+              <li class="grid-containerimglarge">Namn på Örhängen</li>
+              <li class="grid-containerimglarge">Prisen</li>
+              <li class="grid-containerimgsmall">Typ av metall</li>
+              <span class="colordots"></span>
+              <span class="colordots"></span>
+          </ul>
+      </a>
+        <a href="product.html">
+            <img src="y.jpg" style="width:100%">
+            <ul>
+                <li class="grid-containerimgsmall"> ADINA</li>
+                <li class="grid-containerimglarge">Namn på Örhängen</li>
+                <li class="grid-containerimglarge">Prisen</li>
+                <li class="grid-containerimgsmall">Typ av metall</li>
+                <span class="colordots"></span>
+                <span class="colordots"></span>
+            </ul>
+        </a>
+        <a href="product.html">
+          <img src="C.jpg" style="width:100%">
+          <ul>
+              <li class="grid-containerimgsmall">ADINA</li>
+              <li class="grid-containerimglarge">Namn på Örhängen</li>
+              <li class="grid-containerimglarge">Prisen</li>
+              <li class="grid-containerimgsmall">Typ av metall</li>
+              <span class="colordots"></span>
+              <span class="colordots"></span>
+          </ul>
+        </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="row1">
+    <div class="column1">
+      <h2>Kontakt info:</h2>
+      <p>Mejla: <a href="mailto:adina.uf@outlook.com">adina.uf@outlook.com</a></p>
+    </div>
+    <div class="column1">
+      <h2>Hjälp:</h2>
+      <p><a href="#">FAQ</a></p>
+    </div>
+    <div class="column1">
+      <h2>Info om smycken:</h2>
+    <ul>
+        <li><a href="Ringar.html" title="Läs mer om ringar">Ringar</a></li>
+        <li><a href="halsband.html" title="Läs mer om halsband">Halsband</a></li>
+        <li><a href="armband.html" title="Läs mer om armband">Armband</a></li>
+        <li><a href="orhangen.html" title="Läs mer om örhängen">Örhängen</a></li>
+    </ul>
+    </div>
+    <div class="column1">
+      <h2>Matrial/skicka in:</h2>
+      <ul>
+        <li><a href="/ommatrial" title="Om material">Om vårt matrial</a></li>
+        <li><a href="/hurOchVart" title="Hur och vart">Hur och vart skickar man matrial</a></li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size: 10px;">&copy; 2024 ADINA Jewelry. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

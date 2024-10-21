@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-World Account System</title>
+    <style>
+        /* Basic styles for form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            color: green;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Register</h2>
+    <form id="register-form">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit">Register</button>
+        <p id="register-message" class="message"></p>
+    </form>
+
+    <h2>Login</h2>
+    <form id="login-form">
+        <input type="email" id="login-email" placeholder="Enter Email" required>
+        <input type="password" id="login-password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+        <p id="login-message" class="message"></p>
+    </form>
+
+    <div id="dashboard" class="hidden">
+        <h2>Account Dashboard</h2>
+        <p>Welcome, <span id="dashboard-name"></span></p>
+        <form id="update-form">
+            <input type="text" id="update-name" placeholder="Update Name" required>
+            <input type="password" id="update-password" placeholder="Update Password" required>
+            <button type="submit">Update Details</button>
+        </form>
+        <button id="logout-btn">Logout</button>
+        <p id="update-message" class="message"></p>
+    </div>
+</div>
+
+<script>
+    // Register User
+    document.getElementById('register-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        const response = await fetch('http://localhost:3000/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, password })
+        });
+
+        const result = await response.json();
+        document.getElementById('register-message').textContent = result.message;
+    });
+
+    // Login User
+    document.getElementById('login-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+
+        const response = await fetch('http://localhost:3000/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const result = await response.json();
+        if (result.token) {
+            localStorage.setItem('token', result.token);
+            document.getElementById('dashboard-name').textContent = result.name;
+            document.getElementById('dashboard').classList.remove('hidden');
+        }
+        document.getElementById('login-message').textContent = result.message;
+    });
+
+    // Update User
+    document.getElementById('update-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const name = document.getElementById('update-name').value;
+        const password = document.getElementById('update-password').value;
+
+        const token = localStorage.getItem('token');
+        const response = await fetch('http://localhost:3000/api/update', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ name, password })
+        });
+
+        const result = await response.json();
+        document.getElementById('update-message').textContent = result.message;
+    });
+
+    // Logout
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        localStorage.removeItem('token');
+        document.getElementById('dashboard').classList.add('hidden');
+    });
+</script>
+
+</body>
+</html>
