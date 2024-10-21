@@ -1,0 +1,113 @@
+/* Main grid layout for product images and text */
+.grid-containerproduct {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    align-items: center; /* Align items vertically */
+    margin-left: -55.7px;
+}
+
+/* Image section for main product image */
+.grid-itemproductbig img {
+    width: 100%;
+    object-fit: cover;
+    padding: 0;
+    /* Removed negative margin, adjust parent layout if necessary */
+}
+
+/* Product details text (to the right of the image) */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 60px;
+    text-align: left;
+}
+
+/* Additional Product Images */
+.grid-containerproduct-images {
+    display: flex;
+    gap: 0;
+    margin-top: -24.1px;
+    justify-content: flex-start;
+    width: 47.05%;
+    margin-left: -35.7px;
+}
+
+.grid-itemproduct img {
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Text styling */
+.productheader {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.metal-type {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* List styles for product details */
+.ul-product {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.li-productsmall {
+    color: rgb(99, 99, 99);
+    font-size: 1.2rem;
+}
+
+/* Color dots for product variants */
+.color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.colordots1 {
+    background-color: rgb(198, 198, 198);
+    border: solid 1px rgb(220, 220, 220);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.colordots1:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide the radio inputs */
+input[type="radio"] {
+    display: none;
+}
+
+/* Active state for color selection */
+input[type="radio"]:checked + .colordots1 {
+    border: solid 1.4px #000;
+}
+
+/* Color dots with different colors */
+.dot1 { background-color: rgb(198, 198, 198); }
+.dot2 { background-color: rgb(255, 0, 0); }
+.dot3 { background-color: rgb(0, 255, 0); }
+.dot4 { background-color: rgb(0, 0, 255); }

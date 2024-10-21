@@ -1,0 +1,17 @@
+.header-favorit{
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.header-favorit, h2{
+    margin-top: 150px;
+}
+
+.header-favorit, h3{
+    margin-top: 15px;
+    margin-left: 2px;
+}
+
+.header-favorit, p{
+    margin-top: 15px;
+}

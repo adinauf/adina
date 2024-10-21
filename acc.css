@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    background-color: #222;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.pfp {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+
+  .shape {
+    display: block;                /* The shape will be a block element */
+    margin: 0 auto;                /* Center the shape horizontally */
+    position: absolute;            /* Position relative to the closest positioned ancestor */
+    top: 0;                        /* Align the shape to the top */
+    width: 50%;                    /* Set the width to 50% of the container */
+}
+
+.triangle-down {
+    margin: 0 auto;                /* Center horizontally */
+    width: 0;                      /* No width */
+    height: 0;                     /* No height */
+    border-left: 70px solid transparent;  /* Transparent left border */
+    border-right: 70px solid transparent; /* Transparent right border */
+    border-top: 70px solid #555;    /* Creates the downward triangle with a colored top border */
+    z-index: -1;                   /* Places the triangle behind other elements */
+}
+
+.oval-triangle {
+    transform: rotate(50deg);       /* Rotates the oval */
+    margin: -50px 0 0 210px;        /* Set margins (top and left) to position the oval */
+    height: 60px;                   /* Oval height */
+    width: 130px;                   /* Oval width */
+    background-color: #222;         /* Color of the oval */
+    border-radius: 50%;             /* Makes the rectangle shape an oval */
+    z-index: 1;                     /* Places this element on top of other elements */
+}
+
+.oval-triangle:last-of-type {
+    transform: rotate(-50deg);      /* Different rotation for the second oval */
+    margin: -60px 0 0 295px;        /* Different positioning for the second oval */
+}
+
+.ovaldecor {
+    height: 160px;                  /* Height of the oval */
+    width: 260px;                   /* Width of the oval */
+    background-color: transparent;   /* Set the background to transparent (use 'none' with images) */
+    border: 5px solid white;         /* White border around the oval */
+    border-radius: 50%;              /* Makes it an oval */
+    display: block;                  /* Makes it a block element */
+    margin: 0 auto;                  /* Centers it horizontally */
+    position: absolute;              /* Absolute positioning */
+    top: -90px;                      /* Moves the oval up */
+    right: 390px;                    /* Positions it relative to the right side */
+    z-index: 2;                      /* Sets stacking order */
+}
+
+.ovaldecor:last-of-type {
+    right: 400px;                    /* Moves the last oval slightly to the right */
+}
+

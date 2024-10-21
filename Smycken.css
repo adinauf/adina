@@ -1,0 +1,101 @@
+.grid-containerimg {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 columns grid */
+    gap: 20px; /* Increased gap for better spacing */
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.grid-containerimg > div {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.grid-containerimg .img1 {
+    vertical-align: middle;
+    margin-top: 25px;
+}
+
+.grid-containerimg ul {
+    list-style: none;
+    margin: 10px 0;
+    padding-left: 0;
+}
+
+.grid-containerimg li {
+    list-style: none;
+    margin-bottom: 6px;
+    text-align: left; /* Align text to the left */
+}
+
+.grid-containerimgsmall {
+    color: rgb(99, 99, 99);
+    font-size: 12px;
+}
+
+.grid-containerimglarge {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+
+.grid-containerimg a {
+    text-decoration: none;
+}
+
+.colordots-container {
+    display: flex; /* Align dots horizontally */
+    gap: 5px; /* Space between dots */
+    justify-content: left; /* Align dots to the left */
+    margin-top: 10px;
+}
+
+.colordots {
+    background-image: radial-gradient(circle at top left, white, silver, gray);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    transition: transform 0.5s ease;
+    transform-origin: center;
+}
+
+/* Change colors for different dots if needed */
+.colordots:nth-child(1){ background-color: radial-gradient(circle at top left, white, silver, gray);}
+.colordots:nth-child(2) { background: radial-gradient(circle at top left, #fff, #d6c65e, #c9b03a);}
+
+.colordots:hover{
+    transform: scale(1.3);
+}
+
+.text-icon-wrapper {
+    display: flex; 
+    align-items: center; /* Center the items vertically */
+}
+
+.text-icon-wrapper .fas,
+.text-icon-wrapper .far {
+    margin-left: 105px; /* Adjust this value as needed for spacing */
+    margin-top: -5px; /* Move icons up slightly; adjust as necessary */
+    transition: transform 0.5s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer for clickable icons */
+}
+
+.text-icon-wrapper {
+    display: flex; 
+    align-items: center; /* Center the items vertically */
+}
+
+.text-icon-wrapper .fas,
+.text-icon-wrapper .far {
+    margin-left: 100px; /* Space between text and icons */
+    margin-top: -120px; /* Move icons up slightly */
+    transition: transform 0.5s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer for clickable icons */
+}
+
+.text-icon-wrapper:hover .fas,
+.text-icon-wrapper:hover .far { 
+    transform: scale(1.2); /* Scale icons on hover */
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
